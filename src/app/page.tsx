@@ -1,103 +1,267 @@
-import Image from "next/image";
 
-export default function Home() {
+// import { Button } from "@/components/ui/button";
+// import { Input } from "@/components/ui/input";
+// import { Card, CardContent } from "@/components/ui/card";
+// import Accordion from "@/components/ui/accordion";
+// import Link from "next/link";
+
+// export default function PlayersOnlyLanding() {
+//   return (
+//     <div className="bg-black flex flex-col min-h-screen text-white">
+//       {/* Header */}
+//       <header className="flex justify-between items-center bg-black-400 h-24 px-8">
+//         <div className="flex items-center">
+//           <Link href="https://playersonly.io/" className="hidden md:inline-flex">
+//             <img
+//               src="https://media.licdn.com/dms/image/v2/C4E0BAQGfpxGLiuymGA/company-logo_200_200/company-logo_200_200/0/1630620500739/playersonly_logo?e=2147483647&v=beta&t=kxyFViupk8nMOs4wMd52si7s9ItBh_8OsZ1aZoW1ANY"
+//               alt="PlayersOnly Logo"
+//               className="w-14 h-14 rounded-full object-cover"
+//               style={{ marginRight: 0, paddingRight: 0 }}
+//             />
+//           </Link>
+//           <span className="text-white font-extrabold tracking-normal hidden md:inline-block">
+//             PLAYERSONLY
+//           </span>
+//         </div>
+//         <nav className="gap-10 font-light hidden md:flex">
+//           <Link href="https://playersonly.io/">Features</Link>
+//           <Link href="https://playersonly.io/">Insights</Link>
+//           <Link href="https://playersonly.io/">Solutions</Link>
+//           <Link href="https://playersonly.io/">News</Link>
+//         </nav>
+//         <Link
+//           href="https://playersonly.io/"
+//           className="bg-white text-black px-7 py-2 rounded-2xl hover:bg-gray-200 transition-all duration-200 ease-in-out"
+//         >
+//           Book a Demo
+//         </Link>
+//       </header>
+
+//       {/* Top header */}
+//       <section className="py-12 md:py-20 lg:py-24">
+//         <div className="container mx-auto px-4">
+//           <div className="max-w-4xl mx-auto text-center">
+//             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+//               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+//             </h1>
+//             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+//               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ornare, tortor vel maximus efficitur, est sapien gravida ex, eu luctus orci nisi pretium elit.
+//             </p>
+//             {/* Email */}
+//             <div className="max-w-md mx-auto mb-8">
+//               <div className="item-center gap-3">
+//                 <Button className="bg-white text-black hover:bg-white-700 px-8">Lorem Ipsum</Button>
+//               </div>
+//               {/* Social proof */}
+//               <p className="text-sm text-gray-500 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Value Proposition */}
+//       <section className="py-16 bg-gray-600">
+//         <div className="container mx-auto px-4">
+//           <div className="text-center mb-12">
+//             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Lorem ipsum </h2>
+//             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+//               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+//             </p>
+//           </div>
+//           <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+//             <Card className="text-center p-6 border-0 shadow-lg ">
+//               <CardContent className="pt-6">
+//                 <h3 className="text-xl font-semibold mb-3">Lorem Ipsum</h3>
+//                 <p className="text-gray-600">
+//                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+//                 </p>
+//               </CardContent>
+//             </Card>
+//             <Card className="text-center p-6 border-0 shadow-lg">
+//               <CardContent className="pt-6">
+//                 <h3 className="text-xl font-semibold mb-3">Lorem Ipsum</h3>
+//                 <p className="text-gray-600">
+//                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+//                 </p>
+//               </CardContent>
+//             </Card>
+//           </div>
+//           <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-10 mt-10">
+//             <Card className="text-center p-6 border-0 shadow-lg">
+//               <CardContent className="pt-6">
+//                 <h3 className="text-xl font-semibold mb-3">Lorem Ipsum</h3>
+//                 <p className="text-gray-600">
+//                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+//                 </p>
+//               </CardContent>
+//             </Card>
+//             <Card className="text-center p-6 border-0 shadow-lg">
+//               <CardContent className="pt-6">
+//                 <h3 className="text-xl font-semibold mb-3">Lorem ipsum</h3>
+//                 <p className="text-gray-600">
+//                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+//                 </p>
+//               </CardContent>
+//             </Card>
+//           </div>
+//         </div>
+//       </section>
+//     <section className="flex flex-col md:flex-row py-17 bg-gray-900">
+//       <div className="flex-1 flex flex-col justify-end p-8">
+//       <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white dark:text-white mb-4">
+//         Lorem Ipsum
+//       </h2>
+//       <p className="text-xl font-light">
+//          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ornare, tortor vel maximus efficitur, est sapien gravida ex, eu luctus orci nisi pretium elit.
+//       </p>
+//      </div>
+//     <div className="flex-1 p-8">
+//      <Accordion />
+//       </div>
+//     </section>
+//     </div>
+//   );
+// }
+"use client";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Card, CardContent } from "@/components/ui/card";
+import Accordion from "@/components/ui/accordion";
+import Link from "next/link";
+import { FadeIn } from "@/components/ui/FadeIn";
+
+export default function PlayersOnlyLanding() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="bg-black flex flex-col min-h-screen text-white">
+      {/* Header */}
+      <FadeIn>
+        <header className="flex justify-between items-center bg-black-400 h-24 px-8">
+          <div className="flex items-center">
+            <Link href="https://playersonly.io/" className="hidden md:inline-flex">
+              <img
+                src="https://media.licdn.com/dms/image/v2/C4E0BAQGfpxGLiuymGA/company-logo_200_200/company-logo_200_200/0/1630620500739/playersonly_logo?e=2147483647&v=beta&t=kxyFViupk8nMOs4wMd52si7s9ItBh_8OsZ1aZoW1ANY"
+                alt="PlayersOnly Logo"
+                className="w-14 h-14 rounded-full object-cover"
+                style={{ marginRight: 0, paddingRight: 0 }}
+              />
+            </Link>
+            <span className="text-white font-extrabold tracking-normal hidden md:inline-block">
+              PLAYERSONLY
+            </span>
+          </div>
+          <nav className="gap-10 font-light hidden md:flex">
+            <Link href="https://playersonly.io/">Features</Link>
+            <Link href="https://playersonly.io/">Insights</Link>
+            <Link href="https://playersonly.io/">Solutions</Link>
+            <Link href="https://playersonly.io/">News</Link>
+          </nav>
+          <Link
+            href="https://playersonly.io/"
+            className="bg-white text-black px-7 py-2 rounded-2xl hover:bg-gray-200 transition-all duration-200 ease-in-out"
+          >
+            Book a Demo
+          </Link>
+        </header>
+      </FadeIn>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Top header */}
+      <section className="py-12 md:py-20 lg:py-24">
+        <div className="container mx-auto px-4">
+          <FadeIn>
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </h1>
+              <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ornare, tortor vel maximus efficitur, est sapien gravida ex, eu luctus orci nisi pretium elit.
+              </p>
+              {/* Email */}
+              <div className="max-w-md mx-auto mb-8">
+                <div className="item-center gap-3">
+                  <FadeIn delay={100}>
+                    <Button className="bg-white text-black hover:bg-white-700 px-8">Lorem Ipsum</Button>
+                  </FadeIn>
+                </div>
+                {/* Social proof */}
+                <FadeIn delay={200}>
+                  <p className="text-sm text-gray-500 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </FadeIn>
+              </div>
+            </div>
+          </FadeIn>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Value Proposition */}
+      <section className="py-16 bg-black">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <FadeIn>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-400 mb-4">Lorem ipsum </h2>
+              <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </FadeIn>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <FadeIn delay={100}>
+              <Card className="text-center p-6 border-5 border-gray-400 shadow-lg ">
+                <CardContent className="pt-6">
+                  <h3 className="text-xl font-semibold mb-3">Lorem Ipsum</h3>
+                  <p className="text-gray-600">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                </CardContent>
+              </Card>
+            </FadeIn>
+            <FadeIn delay={200}>
+              <Card className="text-center p-6 border-5 border-gray-400 shadow-lg">
+                <CardContent className="pt-6">
+                  <h3 className="text-xl font-semibold mb-3">Lorem Ipsum</h3>
+                  <p className="text-gray-600">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                </CardContent>
+              </Card>
+            </FadeIn>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-10 mt-10">
+            <FadeIn delay={300}>
+              <Card className="text-center p-6 border-5 border-gray-400 shadow-lg">
+                <CardContent className="pt-6">
+                  <h3 className="text-xl font-semibold mb-3">Lorem Ipsum</h3>
+                  <p className="text-gray-600">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                </CardContent>
+              </Card>
+            </FadeIn>
+            <FadeIn delay={400}>
+              <Card className="text-center p-6 border-5 border-gray-400 shadow-lg">
+                <CardContent className="pt-6">
+                  <h3 className="text-xl font-semibold mb-3">Lorem ipsum</h3>
+                  <p className="text-gray-600">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                </CardContent>
+              </Card>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+      <section className="flex flex-col md:flex-row py-17 bg-black">
+        <FadeIn className="flex-1 flex flex-col justify-end p-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-400 dark:text-white mb-4">
+            Lorem Ipsum
+          </h2>
+          <p className="text-xl font-light text-gray-400">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ornare, tortor vel maximus efficitur, est sapien gravida ex, eu luctus orci nisi pretium elit.
+          </p>
+        </FadeIn>
+        <FadeIn className="flex-1 p-8" delay={200}>
+          <Accordion />
+        </FadeIn>
+      </section>
     </div>
   );
 }
