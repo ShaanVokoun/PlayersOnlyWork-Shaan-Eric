@@ -8,7 +8,7 @@ import Link from "next/link";
 import { FadeIn } from "@/components/ui/FadeIn";
 import Topbar from "@/components/ui/Topbar";
 import Hero from "@/components/ui/hero"
-import CardGrid from "@/components/ui/card";
+import CardPlacerholders from "@/components/ui/card";
 
 export default function PlayersOnlyLanding() {
   return (
@@ -33,7 +33,15 @@ export default function PlayersOnlyLanding() {
             </FadeIn>
           </div>
           {/* Card's in the grid order */}
-          <CardGrid />
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <CardPlacerholders />
+            <CardPlacerholders />
+          </div>
+          <div className="gid md:grid-cols-2 lg:grid-colsp-2 gap-8">
+            <CardPlacerholders />
+            <CardPlacerholders />
+          </div>
+        </div>
       </section>
       <section className="flex flex-col md:flex-row py-17 bg-black">
         <FadeIn className="flex-1 flex flex-col justify-end p-8">
