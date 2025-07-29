@@ -8,6 +8,7 @@ import Link from "next/link";
 import { FadeIn } from "@/components/ui/FadeIn";
 import Topbar from "@/components/ui/Topbar";
 import Hero from "@/components/ui/hero"
+import CardGrid from "@/components/ui/card";
 
 export default function PlayersOnlyLanding() {
   return (
@@ -31,51 +32,8 @@ export default function PlayersOnlyLanding() {
               </p>
             </FadeIn>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-            <FadeIn delay={100}>
-              <Card className="text-center p-6 border-5 border-gray-400 shadow-lg ">
-                <CardContent className="pt-6">
-                  <h3 className="text-xl font-semibold mb-3">Lorem Ipsum</h3>
-                  <p className="text-gray-600">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                </CardContent>
-              </Card>
-            </FadeIn>
-            <FadeIn delay={200}>
-              <Card className="text-center p-6 border-5 border-gray-400 shadow-lg">
-                <CardContent className="pt-6">
-                  <h3 className="text-xl font-semibold mb-3">Lorem Ipsum</h3>
-                  <p className="text-gray-600">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                </CardContent>
-              </Card>
-            </FadeIn>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-10 mt-10">
-            <FadeIn delay={300}>
-              <Card className="text-center p-6 border-5 border-gray-400 shadow-lg">
-                <CardContent className="pt-6">
-                  <h3 className="text-xl font-semibold mb-3">Lorem Ipsum</h3>
-                  <p className="text-gray-600">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                </CardContent>
-              </Card>
-            </FadeIn>
-            <FadeIn delay={400}>
-              <Card className="text-center p-6 border-5 border-gray-400 shadow-lg">
-                <CardContent className="pt-6">
-                  <h3 className="text-xl font-semibold mb-3">Lorem ipsum</h3>
-                  <p className="text-gray-600">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                </CardContent>
-              </Card>
-            </FadeIn>
-          </div>
-        </div>
+          {/* Card's in the grid order */}
+          <CardGrid />
       </section>
       <section className="flex flex-col md:flex-row py-17 bg-black">
         <FadeIn className="flex-1 flex flex-col justify-end p-8">

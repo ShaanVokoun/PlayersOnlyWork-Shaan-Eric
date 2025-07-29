@@ -1,5 +1,6 @@
+"use client";
 import * as React from "react"
-
+import { FadeIn } from "@/components/ui/FadeIn";
 import { cn } from "@/lib/utils"
 
 function Card({ className, ...props }: React.ComponentProps<"div">) {
@@ -71,6 +72,7 @@ function CardContent({ className, ...props }: React.ComponentProps<"div">) {
   )
 }
 
+
 function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
@@ -89,4 +91,34 @@ export {
   CardAction,
   CardDescription,
   CardContent,
+}
+
+
+
+export function CardPlacerholders() {
+  return(
+    <FadeIn delay={100}>
+      <Card className="text-center p-6 border-5 border-gray-400 shadow-lg ">
+        <CardContent className="pt-6">
+          <h3 className="text-xl font-semibold mb-3">Lorem Ipsum</h3>
+          <p className="text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        </CardContent>
+      </Card>
+    </FadeIn>
+  );
+}
+
+export function CardGrid(){
+  return(
+    <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+      <CardPlacerholders />
+      <CardPlacerholders />
+    </div>
+    <div className="gid md:grid-cols-2 lg:grid-colsp-2 gap-8">
+      <CardPlacerholders />
+      <CardPlacerholders />
+    </div>
+  );
 }
